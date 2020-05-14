@@ -1,0 +1,148 @@
+@prefix bds:   <http://www.bigdata.com/rdf/search#> .
+@prefix bd:    <http://www.bigdata.com/rdf#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix hint:  <http://www.bigdata.com/queryHints#> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://wallscope.co.uk/ontology/8354a525-7d52-4a21-9253-d4ab2e79da30>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "cat, furry, big cat, norwegian" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/23aee56d-f184-4278-be71-bbccd41f3948> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "one of the biggest breeds of domestic cats" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "norwegian forest cat " .
+
+<http://wallscope.co.uk/ontology/50791581-a275-412d-b9f3-0c6aaee49c98>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "yellow, weed" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/7bb9b4c9-e38e-46b0-ba9d-5c9094f968ab> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "some believe it is a weed" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "daffodil" .
+
+<http://wallscope.co.uk/ontology/547ce6d8-65f1-4307-874a-dc10353514d6>
+        a       <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/5b90c22e-f2b2-4b2b-b422-36911f39422d> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "eagle" .
+
+<http://wallscope.co.uk/ontology/23aee56d-f184-4278-be71-bbccd41f3948>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "pets, feline" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/0e180eae-8695-4170-b3bc-52727dc80f9f> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "a common pet" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "cat" .
+
+<http://wallscope.co.uk/ontology/8387c732-5111-41b2-a26f-25cbd974bdd7>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "love, romance" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/50791581-a275-412d-b9f3-0c6aaee49c98> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "typically red and romantic" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "rose" .
+
+<http://wallscope.co.uk/ontology/5b90c22e-f2b2-4b2b-b422-36911f39422d>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "birds, ave" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/32ab82f5-e72c-4a00-b7ce-b10a91c28e58> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "mostly birds" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "aves" .
+
+<http://wallscope.co.uk/ontology/0e180eae-8695-4170-b3bc-52727dc80f9f>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "mammals" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/32ab82f5-e72c-4a00-b7ce-b10a91c28e58> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "what humans are" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "mammal" .
+
+<http://wallscope.co.uk/ontology/32ab82f5-e72c-4a00-b7ce-b10a91c28e58>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "fauna, animals, beasts" ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "anything alive that isnt a plant is technically an animal" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "animal" .
+
+<http://wallscope.co.uk/ontology/2e1fed01-3189-4162-a560-7fad84825ffd>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "dolphin, sea, dauphin" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/0e180eae-8695-4170-b3bc-52727dc80f9f> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "aquatic mammals" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "elephant" .
+
+
+<http://wallscope.co.uk/ontology/2cbbf023-9fea-4925-9c77-c3a4a77663ce>
+        a       <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/0e180eae-8695-4170-b3bc-52727dc80f9f> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "dolphin" .
+
+<http://wallscope.co.uk/ontology/7bb9b4c9-e38e-46b0-ba9d-5c9094f968ab>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "plants, plant, flora" ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "conduct photosynthesis and save bees!" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "plant" .
+
+
+<http://wallscope.co.uk/ontology/7bb9b4c9-e38e-46b0-ba9d-1a11111111111>
+        a <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://schema.org/keywords>  "british, shorthair, english, cat" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/23aee56d-f184-4278-be71-bbccd41f3948> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "a common british cat" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "british shorthair" .
+
+
+<http://wallscope.co.uk/ontology/7bb9b4c9-e38e-46b0-ba9d-1b11111111112>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "breathe through gills" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/32ab82f5-e72c-4a00-b7ce-b10a91c28e58> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "fish" .
+
+
+<http://wallscope.co.uk/ontology/7bb9b4c9-e38e-46b0-ba9d-1b11111111113>
+        a                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#note>
+                "common fish to ear" ;
+        <http://www.w3.org/2004/02/skos/core#broader>
+                <http://wallscope.co.uk/ontology/7bb9b4c9-e38e-46b0-ba9d-1b11111111112> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> 
+                "tuna" .
+
+
+
+
+

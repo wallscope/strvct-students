@@ -1,0 +1,913 @@
+@prefix wallsRes: <http://wallscope.co.uk/resource/peacetech/> .
+@prefix wallsOnt: <http://wallscope.co.uk/ontology/peacetech/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#******************************************************************************
+# Top-level words are defined as Concepts
+# with everything below being a concept, which can have further "child" concepts
+# POSSIBLE TAGS:  LOCATION ORGANIZATION DATE MONEY PERSON PERCENT TIME
+#******************************************************************************
+
+# 1. Ceasefire Timeline
+<http://wallscope.co.uk/resource/peacetech/concept/ceasefire_timeline> a skos:Concept ;
+	skos:hiddenLabel "period", "timeframe", "timescale", "deadline" ;
+	skos:prefLabel "Ceasefire Timeline".
+
+# 1.1 ceasefire start 
+<http://wallscope.co.uk/resource/peacetech/concept/ceasefire_start> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_timeline> ;
+	skos:hiddenLabel "[NUMBER] days after signature",
+		"[NUMBER] hours after signature",
+		"[TIME]",
+		"ceasefire commenc",
+		"ceasefire start",
+		"immediate",
+		"upon signature",
+		"upon the occurrence of",
+		"enters into force",
+		"with effect from [DATE]",
+		"with effect from [TIME]",
+		"at a time to be decided" ;
+	skos:prefLabel "Ceasefire Start" .
+
+# 1.2 ceasefire duration 
+<http://wallscope.co.uk/resource/peacetech/concept/ceasefire_duration> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_timeline> ;
+	skos:hiddenLabel "ceasefire period",
+		"ceasefire timeframe ",
+		"ceasefire timescale",
+		"ceasefire deadline" ;
+	skos:prefLabel "Ceasefire Duration" .
+
+# 1.2.1 temporary ceasefire
+<http://wallscope.co.uk/resource/peacetech/concept/temporary_ceasefire> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_duration> ;
+	skos:hiddenLabel 
+		"ceasefire until" , 
+		"ceasefire prolonged" ,
+		"ceasefire extended",
+		"ceasefire extension",
+		"ceasefire renew",
+		"period of ceasefire",
+		"ceasefire will last",
+		"transitional ceasefire" ;
+	skos:prefLabel "Temporary Ceasefire" .
+
+# 1.2.2 permanent ceasefire
+<http://wallscope.co.uk/resource/peacetech/concept/permanent_ceasefire> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_duration> ;
+	skos:hiddenLabel 
+		"lasting ceasefire",
+		"permanent ceasefire",
+		"indefinite ceasefire",
+		"formal ceasefire",
+		"immediate ceasefire",
+		"ceasefire remain in effect" ;
+	skos:prefLabel "Permanent Ceasefire" .
+
+# 2. Geographic Scope
+<http://wallscope.co.uk/resource/peacetech/concept/geographic_scope> a skos:Concept ;
+	skos:hiddenLabel "geographic area", "boundar", "territor" ;
+	skos:prefLabel "Geographic Scope" .
+
+# 2.1 Land Areas
+<http://wallscope.co.uk/resource/peacetech/concept/land_areas> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/geographic_scope> ;
+	skos:hiddenLabel 
+		"[LOCATION]",
+		"town",
+		"residential",
+		"national",
+		"municipalit",
+		"administrative district",
+		"district",
+		"canton",
+		"battlefield",
+		"area of [NUMBER]",
+		"ceasefire zone",
+		"zone",
+		"buffer",
+		"areas of confrontation",
+		"contact line",
+		"designated line",
+		"confrontation line",
+		"demarcation line",
+		"within the area so defined",
+		"shaded area",
+		"territory",
+		"under control",
+		"controlled territory",
+		"line of juxtaposition",
+		"areas where forces are in direct contact",
+		"areas designated by",
+		"ceasefire line" ;
+	skos:prefLabel "Land Areas" .
+
+# 2.2 Water Areas
+<http://wallscope.co.uk/resource/peacetech/concept/water_areas> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/geographic_scope> ;
+	skos:hiddenLabel 
+		"sea",
+		"river",
+		"border crossing",
+		"strait",
+		"bay",
+		"delta",
+		"port";
+	skos:prefLabel "Water Areas" .
+
+# 2.3 Air
+<http://wallscope.co.uk/resource/peacetech/concept/air> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/geographic_scope> ;
+	skos:hiddenLabel 
+		"fly",
+		"no-fly",
+		"air exclusion";
+	skos:prefLabel "Air" .
+
+# 3. Suspension of hostilities
+<http://wallscope.co.uk/resource/peacetech/concept/suspension_of_hostilities> a skos:Concept ;
+	skos:hiddenLabel "conflict",
+		"military action",
+		"military stand down",
+		"further fighting",
+		"reconnaissance",
+		"insurgent action",
+		"non-resumption of hostilities",
+		"clashes",
+		"conflict",
+		"combat activities",
+		"violent actions",
+		"bloodshed",
+		"terminate fire",
+		"firing ",
+		"massacres",
+		"intimidation",
+		"disengag",
+		"suspend",
+		"stop",
+		"cessas",
+		"desist",
+		"violen",
+		"fighting" ;
+	skos:prefLabel "Suspension of Hostilities" .
+
+# 3.1 Firing of weapons
+<http://wallscope.co.uk/resource/peacetech/concept/firing_of_weapons> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/suspension_of_hostilities> ;
+	skos:hiddenLabel "discharg",
+		"aim",
+		"target",
+		"shoot",
+		"bomb",
+		"launch",
+		"snip",
+		"bombard",
+		"propel",
+		"offensive",
+		"weapons firing" ;
+	skos:prefLabel "Firing of weapons" .
+
+# 3.1 Mine Related Activities
+<http://wallscope.co.uk/resource/peacetech/concept/mine_related_activities> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/suspension_of_hostilities> ;
+	skos:hiddenLabel "landmine",
+		"mine",
+		"IED",
+		"improvised explosive device",
+		"antipersonnel",
+		"cluster bomb",
+		"cluster munnition",
+		"mine clearance",
+		"mine laying",
+		"unexploded ordnance" ;
+	skos:prefLabel "Mine Related Activities" .
+
+
+# 4. DDR
+<http://wallscope.co.uk/resource/peacetech/concept/ddr> a skos:Concept ;
+	skos:hiddenLabel "disarmament", "demobilization", "reintegration" ;
+	skos:prefLabel "DDR" .
+
+# 4.1 Disarmament
+<http://wallscope.co.uk/resource/peacetech/concept/disarmament> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ddr> ;
+	skos:hiddenLabel "disarmament";
+	skos:prefLabel "Mine Related Activities" .
+
+# 4.1.1 Decomissioning
+<http://wallscope.co.uk/resource/peacetech/concept/decomissioning> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/disarmament> ;
+	skos:hiddenLabel "decomission", 
+		"demilitaris",
+		"weapons", "gun", "artillery",
+		"give up weapons", "give up gun", "give up artillery",
+		"lay down weapons", "lay down gun", "lay down artillery",
+		"withdraw weapons", "withdraw gun", "withdraw artillery",
+		"hand over weapons", "hand over gun", "hand over artillery",
+		"hand in weapons", "hand in gun", "hand in artillery",
+		"handover weapons", "handover gun", "handover artillery",
+		"surrender weapons", "surrender gun", "surrender artillery",
+		"remove weapons", "remove gun", "remove artillery",
+		"retain weapons", "retain gun", "retain artillery",
+		"posess weapons", "posess gun", "posess artillery",
+		"separation of weapons", "separation of gun", "separation of artillery" ;
+	skos:prefLabel "Decomissioning" .
+
+# 4.1.2 Non-proliferation
+<http://wallscope.co.uk/resource/peacetech/concept/non-proliferation> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/disarmament> ;
+	skos:hiddenLabel "decomission", 
+		"artillery supply", "ammunition supply", "arms supply",
+    	"artillery resuppl", "ammunition resuppl", "arms resuppl",
+    	"artillery manufactur", "ammunition manufactur", "arms manufactur",
+    	"artillery import", "ammunition import", "arms import",
+    	"artillery acquir", "ammunition acquir", "arms acquir",
+    	"artillery making", "ammunition making", "arms making",
+    	"artillery aquisi", "ammunition aquisi", "arms aquisi",
+    	"artillery replenish", "ammunition replenish", "arms replenish",
+    	"artillery illicit trafficking", "ammunition illicit trafficking", "arms illicit trafficking",
+    	"artillery fortifying", "ammunition fortifying", "arms fortifying",
+    	"artillery distributing", "ammunition distributing", "arms distributing",
+    	"artillery arming civilians", "ammunition arming civilians", "arms arming civilians",
+    	"introduction of artillery", "introduction of ammunition", "introduction of arms", "introduction of other war equipment" ;
+	skos:prefLabel "Non-proliferation" .
+
+# 4.2 Weapons/Ammunition
+<http://wallscope.co.uk/resource/peacetech/concept/weapons_ammunition> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ddr> ;
+	skos:hiddenLabel 
+		"weapon",
+		"ammunition",
+		"artillery",
+		"arms",
+		"mortar shell",
+		"rocket",
+		"weapons mounted on vehicles",
+		"rocket propelled grenades",
+		"RPG",
+		"weapons",
+		"heavy machine",
+		"ballistic missile system",
+		"rocket and artillery launches",
+		"bullet",
+		"anti-aircraft weapon",
+		"mortar",
+		"ground-to-ground" ,
+		"missile system",
+		"tank";
+	skos:prefLabel "Weapons/Ammunition" .
+
+# 5. Demobilisation
+<http://wallscope.co.uk/resource/peacetech/concept/demobilisation> a skos:Concept ;
+	skos:hiddenLabel  "demobilization", "demobilisation" ;
+	skos:prefLabel "Demobilisation" .
+
+# 5.1 Method of Separation
+<http://wallscope.co.uk/resource/peacetech/concept/method_of_separation> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/demobilisation> ;
+	skos:hiddenLabel 
+		"disband",
+		"dissol",
+		"separat",
+		"redeploy",
+		"freeze",
+		"forward deployments",
+		"move of additional forces",
+		"quarter",
+		"confine",
+		"concentration of forces",
+		"armed formation",
+		"reduct",
+		"constrict",
+		"disengage";
+	skos:prefLabel "Method of Separation" .
+
+# 5.2 Assembly
+<http://wallscope.co.uk/resource/peacetech/concept/assembly> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/demobilisation> ;
+	skos:hiddenLabel 
+		"zones of separation",
+		"ceasefire line",
+		"assembly points",
+		"assembly areas",
+		"canton",
+		"buffer",
+		"mutually agreed positions",
+		"line of contact",
+		"confrontation line",
+		"demarcation line",
+		"area of separation";
+	skos:prefLabel "Assembly" .
+
+# 6. Reintegration
+<http://wallscope.co.uk/resource/peacetech/concept/reintegration> a skos:Concept ;
+	skos:hiddenLabel  "reintegration" ;
+	skos:prefLabel "Reintegration" .
+
+# 6.1 Political Party Reform
+<http://wallscope.co.uk/resource/peacetech/concept/political_party_reform> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/reintegration> ;
+	skos:hiddenLabel 
+		"political life",
+		"institutional life",
+		"political life of the country",
+		"institutional life of the country";
+	skos:prefLabel "Political Party Reform" .
+
+# 6.2 Social and Economic Reintegration
+<http://wallscope.co.uk/resource/peacetech/concept/social_economic_reintegration> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/reintegration> ;
+	skos:hiddenLabel 
+		"social reintegration",
+		"economic reintegration",
+		"social and economic reintegration";
+	skos:prefLabel "Social and Economic Reintegration" .
+
+# 6.2.1 Civilian Life
+<http://wallscope.co.uk/resource/peacetech/concept/civilian_life> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/social_economic_reintegration> ;
+	skos:hiddenLabel 
+		"civilian life",
+		"rehabilitation",
+		"demobili",
+		"employment",
+		"excombatants";
+	skos:prefLabel "Civilian Life" .
+
+# 6.2.2 Non-combatant status
+<http://wallscope.co.uk/resource/peacetech/concept/non-combatant_status> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/social_economic_reintegration> ;
+	skos:hiddenLabel 
+		"non combatant status",
+		"normal life";
+	skos:prefLabel "Non-combatant status" .
+
+# 6.2.3 Return to families/home/village
+<http://wallscope.co.uk/resource/peacetech/concept/return_famillies_home_village> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/social_economic_reintegration> ;
+	skos:hiddenLabel 
+		"return to famil",
+		"return home",
+		"return to village",
+		"subsidies",
+		"subsidies for the unemployed";
+	skos:prefLabel "Return to families/home/village" .
+
+# 6.3 Military Integration
+<http://wallscope.co.uk/resource/peacetech/concept/military_integration> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/reintegration> ;
+	skos:hiddenLabel 
+		"military integration",
+		"merg",
+		"combin",
+		"joint command",
+		"integrat",
+		"shar",
+		"military structure",
+		"common army",
+		"new national army",
+		"new national police force",
+		"new national service";
+	skos:prefLabel "Military Integration" .
+
+# 7. Humanitarian Provisions
+<http://wallscope.co.uk/resource/peacetech/concept/humanitarian_provisions> a skos:Concept ;
+	skos:hiddenLabel "humanitarian provisions" ;
+	skos:prefLabel "Humanitarian Provisions" .
+
+# 7.1 Refugees and internally displaced persons
+<http://wallscope.co.uk/resource/peacetech/concept/refugees_and_internally_displaced_persons> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/humanitarian_provisions> ;
+	skos:hiddenLabel 
+		"refugee",
+		"internally displaced",
+		"repatriation",
+		"displac",
+		"resettl",
+		"return",
+		"property",
+		"home",
+		"right to return";
+	skos:prefLabel "Refugees and internally displaced persons" .
+
+# 7.2 Prisoners
+<http://wallscope.co.uk/resource/peacetech/concept/prisoners> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/humanitarian_provisions> ;
+	skos:hiddenLabel 
+		"prisoner",
+		"detained person",
+		"detained",
+		"captur",
+		"detent",
+		"political prisoners",
+		"prisoners of war",
+		"international committee of the red cross",
+		"red cross",
+		"ICRC";
+	skos:prefLabel "Prisoners" .
+
+# 7.2.1 Prisoner release/exchange
+<http://wallscope.co.uk/resource/peacetech/concept/prisoner_release_exchange> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/prisoners> ;
+	skos:hiddenLabel 
+		"prisoner release",
+		"prisoner exchange",
+		"exchanging of prisoners", "releasing of prisoners", "freeing of prisoners",
+		"exchanging of detained persons", "releasing of detained persons", "freeing of detained persons",
+		"exchanging of those detained", "releasing of those detained", "freeing of those detained",
+		"exchanging of captur", "releasing of captur", "freeing of captur",
+		"exchanging of detent", "releasing of detent", "freeing of detent",
+		"exchanging of political prisoners", "releasing of political prisoners", "freeing of political prisoners",
+		"exchanging of prisoners of war", "releasing of prisoners of war", "freeing of prisoners of war",
+		"international committee of the red cross",
+		"red cross",
+		"ICRC";
+	skos:prefLabel "Prisoner release/exchange" .
+
+# 7.2.1 Prisoner protection
+<http://wallscope.co.uk/resource/peacetech/concept/prisoner_protection> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/prisoners> ;
+	skos:hiddenLabel
+		"prisoner protection",
+		"detention of prisoners", "execution of prisoners",
+		"detention of detained persons", "execution of detained persons",
+		"detention of those detained", "execution of those detained",
+		"detention of captur", "execution of captur",
+		"detention of detent", "execution of detent",
+		"detention of political prisoners", "execution of political prisoners",
+		"detention of prisoners of war", "execution of prisoners of war",
+		"international committee of the red cross",
+		"red cross",
+		"ICRC";
+	skos:prefLabel "Prisoner protection" .
+
+# 7.3 Humanitarian Assistance
+<http://wallscope.co.uk/resource/peacetech/concept/humanitarian_assistance> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/humanitarian_provisions> ;
+	skos:hiddenLabel 
+		"humanitarian assistance", 
+		"aid",
+		"relief";
+	skos:prefLabel "Humanitarian Assistance" .
+
+# 7.3.1 Humanitarian Supplies
+<http://wallscope.co.uk/resource/peacetech/concept/humanitarian_supplies> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/humanitarian_assistance> ;
+	skos:hiddenLabel 
+		"humanitarian supplies",
+		"food",
+		"water",
+		"medicin",
+		"medical",
+		"fuel oils and lubricants",
+		"stationery",
+		"humanitarian activities",
+		"united nations high comissioner for refugees",
+		"un refugee agency",
+		"unhcr",
+		"international agencies",
+		"humanitarian organisations",
+		"humanitarian co-operation";
+	skos:prefLabel "Humanitarian Supplies" .
+
+# 7.3.2 Humanitarian Access
+<http://wallscope.co.uk/resource/peacetech/concept/humanitarian_access> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/humanitarian_assistance> ;
+	skos:hiddenLabel 
+		"humanitarian access",
+		"corridors",
+		"free movement of humanitarian convoys ",
+		"united nations high comissioner for refugees",
+		"un refugee agency",
+		"unhcr",
+		"humanitarian co-operation",
+		"international agencies",
+		"humanitarian organisations",
+		"conditions conducive to the provision of urgent humanitarian assistance",
+		"humanitarian workers",
+		"supply routes",
+		"humanitarian convoys";
+	skos:prefLabel "Humanitarian Access" .
+
+# 7.4 Reconstruction
+<http://wallscope.co.uk/resource/peacetech/concept/reconstruction> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/humanitarian_provisions> ;
+	skos:hiddenLabel 
+		"reconstruction", 
+		"re-opening of roads",
+		"removal of mines",
+		"build",
+		"rebuild",
+		"restorat",
+		"infrastructure",
+		"economic growth",
+		"employment";
+	skos:prefLabel "Reconstruction" .
+
+# 8. Ceasefire Violations
+<http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> a skos:Concept ;
+	skos:hiddenLabel 
+		"ceasefire violations", 
+		"duties",
+		"acts prohibited",
+		"stipulation",
+		"breach",
+		"infring",
+		"fail",
+		"contraven",
+		"commit",
+		"obligat",
+		"undertak",
+		"prohibit";
+	skos:prefLabel "Ceasefire Violations" .
+
+# 8.1 General breaches
+<http://wallscope.co.uk/resource/peacetech/concept/general_breaches> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"general breaches",
+		"bombing",
+		"shooting",
+		"firing",
+		"attacking",
+		"laying mines",
+		"provocat",
+		"sabotage",
+		"subversive activities",
+		"hijack",
+		"piracy",
+		"pirate",
+		"grenade-throwing",
+		"robber",
+		"liquidation",
+		"assassination",
+		"offensive position",
+		"unauthorised movement",
+		"redeployment",
+		"new positions ",
+		"move forces",
+		"prohibit";
+	skos:prefLabel "General breaches" .
+
+# 8.2 Killing
+<http://wallscope.co.uk/resource/peacetech/concept/killing> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"assassinat",
+		"summary detention",
+		"summary execution",
+		"execution",
+		"kill",
+		"massacre",
+		"blood shed",
+		"genocide",
+		"murder";
+	skos:prefLabel "Killing" .
+
+# 8.3 Recruitment
+<http://wallscope.co.uk/resource/peacetech/concept/recruitment> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"recruitment",
+		"recruit",
+		"drafting",
+		"mobilization",
+		"training",
+		"enlist",
+		"conscript",
+		"forced";
+	skos:prefLabel "Recruitment" .
+
+# 8.4 Propaganda
+<http://wallscope.co.uk/resource/peacetech/concept/propaganda> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"propaganda",
+		"incitement",
+		"hate speech",
+		"promote hatred",
+		"media wars",
+		"defamatory statements",
+		"untruthful statements",
+		"derogatory statements",
+		"incitement of ethnic hatred",
+		"media";
+	skos:prefLabel "Propaganda" .
+
+# 8.5 Kidnapping
+<http://wallscope.co.uk/resource/peacetech/concept/kidnapping> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"abduct",
+		"abducted children and women",
+		"taken",
+		"hostage",
+		"hijack",
+		"prisoner",
+		"captive";
+	skos:prefLabel "Kidnapping" .
+
+# 8.6 Obstruction of humanitarian assistance
+<http://wallscope.co.uk/resource/peacetech/concept/obstruction_of_humanitarian_assistance> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"obstruction of humanitarian assistance",
+		"block access",
+		"blockaid",
+		"sanctions",
+		"access",
+		"non-governmental organisation",
+		"NGO",
+		"humanitarian assistance",
+		"humanitarian co-operation";
+	skos:prefLabel "Obstruction of humanitarian assistance" .
+
+# 8.7 Attacks on property
+<http://wallscope.co.uk/resource/peacetech/concept/attacks_on_property> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"burning of villages",
+		"burning of public property",
+		"burning of private property",
+		"destruction of religious buildings",
+		"pillage",
+		"plunder",
+		"exploit",
+		"destroy",
+		"property and infrastructure",
+		"schools",
+		"hospitals",
+		"cattle",
+		"cattle rustling";
+	skos:prefLabel "Attacks on property" .
+
+# 8.8 Other attacks
+<http://wallscope.co.uk/resource/peacetech/concept/other_attacks> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/ceasefire_violations> ;
+	skos:hiddenLabel
+		"summary executions",
+		"mutilation",
+		"torture",
+		"harassment",
+		"arbitrary detention ",
+		"persecution",
+		"violence",
+		"abuse",
+		"discrimination",
+		"exclusion",
+		"arming civilians",
+		"hijacking",
+		"piracy",
+		"bombings",
+		"grenade-throwing",
+		"robberies",
+		"liquidations",
+		"assassinations",
+		"non-discrimination";
+	skos:prefLabel "Other attacks" .
+
+
+# 9. Groups
+<http://wallscope.co.uk/resource/peacetech/concept/groups> a skos:Concept ;
+	skos:hiddenLabel  "group" ;
+	skos:prefLabel "Groups" .
+
+# 9.1 Women
+<http://wallscope.co.uk/resource/peacetech/concept/women> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/groups> ;
+	skos:hiddenLabel
+		"woman", "women", "widow", "girl",
+		"attack woman", "attack women", "attack widow", "attack girl",
+		"sexual harassment woman", "sexual harassment women", "sexual harassment widow", "sexual harassment girl",
+		"sexual exploitation woman", "sexual exploitation women", "sexual exploitation widow", "sexual exploitation girl",
+		"gender-based violence",
+		"rape";
+	skos:prefLabel "Women" .
+
+# 9.2 Children
+<http://wallscope.co.uk/resource/peacetech/concept/children> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/groups> ;
+	skos:hiddenLabel
+		"child", "orphan", "boy", "girl";
+	skos:prefLabel "Children" .
+
+# 9.2.1 Child Recruitment
+<http://wallscope.co.uk/resource/peacetech/concept/child_recruitment> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/children> ;
+	skos:hiddenLabel
+		"child enlistment", "child soldier enlistment", "orphan enlistment", "boy enlistment", "girl enlistment",
+		"child conscript", "child soldier conscript", "orphan conscript", "boy conscript", "girl conscript",
+		"child conscription", "child soldier conscription", "orphan conscription", "boy conscription", "girl conscription",
+		"geneva convention",
+		"optional protocol to the convention on the rights of the child";
+	skos:prefLabel "Child Recruitment" .
+
+# 9.3 Same as 7.1 Refugees and internally displaced persons
+<http://wallscope.co.uk/resource/peacetech/concept/refugees_and_internally_displaced_persons> skos:broader <http://wallscope.co.uk/resource/peacetech/concept/groups> .
+
+# 9.4 Same as 7.2 Prisoners
+<http://wallscope.co.uk/resource/peacetech/concept/prisoners> skos:broader <http://wallscope.co.uk/resource/peacetech/concept/groups> .
+
+# 9.5 Civilians
+<http://wallscope.co.uk/resource/peacetech/concept/civilians> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/groups> ;
+	skos:hiddenLabel 
+		"civilians", "citizens", "ordinary people", "common people";
+	skos:prefLabel "Civilians" .
+
+# 10 Implementation
+<http://wallscope.co.uk/resource/peacetech/concept/implementation> a skos:Concept ;
+	skos:hiddenLabel "implementation" ;
+	skos:prefLabel "Implementation" .
+
+# 10.1 Implementation Mechanisms
+<http://wallscope.co.uk/resource/peacetech/concept/implementation_mechanisms> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation> ;
+	skos:hiddenLabel "implementation mechanism" ;
+	skos:prefLabel "Implementation Mechanisms" .
+
+# 10.1.1 International Mechanisms
+<http://wallscope.co.uk/resource/peacetech/concept/international_mechanisms> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation_mechanisms> ;
+	skos:hiddenLabel "international mechanism" ,
+		"united nations", "un",
+		"security council resolution", "scr", "sc resolution", "unscr",
+		"international monitoring group",
+		"contact group",
+		"international observers",
+		"international supervision",
+		"mixed implementation mechanism",
+		"hybrid",
+		"joint military commission",
+		"technical group",
+		"internal implementation mechanism",
+		"local implementation",
+		"domestic implementation",
+		"national implementation";
+	skos:prefLabel "International Mechanisms" .
+
+# 10.1.2 Implementation Mechanism Functions
+<http://wallscope.co.uk/resource/peacetech/concept/implementation_mechanism_functions> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation_mechanisms> ;
+	skos:hiddenLabel "international mechanism functions" ,
+		"role", "responsibilit", "task", "mandate",
+		"verif", "role verif", "responsibilit verif", "task verif", "mandate verif",
+		"guarantee", "role guarantee", "responsibilit guarantee", "task guarantee", "mandate guarantee",
+		"monitor", "role monitor", "responsibilit monitor", "task monitor", "mandate monitor",
+		"inspect", "role inspect", "responsibilit inspect", "task inspect", "mandate inspect",
+		"observ", "role observ", "responsibilit observ", "task observ", "mandate observ",
+		"implement", "role implement", "responsibilit implement", "task implement", "mandate implement",
+		"supervis", "role supervis", "responsibilit supervis", "task supervis", "mandate supervis",
+		"support", "role support", "responsibilit support", "task support", "mandate support",
+		"assist", "role assist", "responsibilit assist", "task assist", "mandate assist",
+		"facilitat", "role facilitat", "responsibilit facilitat", "task facilitat", "mandate facilitat",
+		"co-ordinat", "role co-ordinat", "responsibilit co-ordinat", "task co-ordinat", "mandate co-ordinat",
+		"refer", "role refer", "responsibilit refer", "task refer", "mandate refer",
+		"oversee", "role oversee", "responsibilit oversee", "task oversee", "mandate oversee",
+		"logistical", "logistical role", "logistical responsibilit", "logistical task", "logistical mandate",
+		"technical",  "technical role", "technical responsibilit", "technical task", "technical mandate",
+		"settle",
+		"report periodically",
+		"arbitrate",
+		"dispute resolution",
+		"investigat",
+		"resolve",
+		"find solution",
+		"disciplin",
+		"recommendations on disciplinary measures",
+		"draft",
+		"fund",
+		"finance",
+		"complete negotiation";
+	skos:prefLabel "Implementation Mechanism Functions" .
+
+# 10.2 Gender provisions
+<http://wallscope.co.uk/resource/peacetech/concept/gender_provisions> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation> ;
+	skos:hiddenLabel 
+		"gender provisions",
+		"role of women",
+		"representation of women",
+		"inclusion of women",
+		"women included",
+		"verif role of women", "verif representation of women", "verif inclusion of women",
+		"guarantee role of women", "guarantee representation of women", "guarantee inclusion of women",
+		"monitor role of women", "monitor representation of women", "monitor inclusion of women",
+		"inspect role of women", "inspect representation of women", "inspect inclusion of women",
+		"observ role of women", "observ representation of women", "observ inclusion of women",
+		"implement role of women", "implement representation of women", "implement inclusion of women",
+		"supervis role of women", "supervis representation of women", "supervis inclusion of women",
+		"support role of women", "support representation of women", "support inclusion of women",
+		"assist role of women", "assist representation of women", "assist inclusion of women",
+		"facilitat role of women", "facilitat representation of women", "facilitat inclusion of women",
+		"co-ordinat role of women", "co-ordinat representation of women", "co-ordinat inclusion of women",
+		"refer role of women", "refer representation of women", "refer inclusion of women",
+		"oversee role of women", "oversee representation of women", "oversee inclusion of women";
+	skos:prefLabel "Gender provisions" .
+
+# 10.3 Information Exchange
+<http://wallscope.co.uk/resource/peacetech/concept/information_exchange> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation> ;
+	skos:hiddenLabel 
+		"information exchange",
+		"notif information mines", "notif information explosives", "notif information mine-field records", "notif information positioning units",
+		"notif information forces", "notif information armament", "notif information equipment", "notif information location", "notif information front line", "notif information defen works", "notif information defen positions",
+		"pass on information mines", "pass on information explosives", "pass on information mine-field records", "on information positioning units",
+		"on information forces", "on information armament", "on information equipment", "on information location", "on information front line", "on information defen works", "on information defen positions",
+		"disclose information mines", "disclose information explosives", "disclose information mine-field records", "disclose information positioning units",
+		"disclose information forces", "disclose information armament", "disclose information equipment", "disclose information location", "disclose information front line", "disclose information defen works", "disclose information defen positions",
+		"offer information mines", "offer information explosives", "offer information mine-field records", "offer information positioning units",
+		"offer information forces", "offer information armament", "offer information equipment", "offer information location", "offer information front line", "offer information defen works", "offer information defen positions",
+		"publish information mines", "publish information explosives", "publish information mine-field records", "publish information positioning units",
+		"publish information forces", "publish information armament", "publish information equipment", "publish information location", "publish information front line", "publish information defen works", "publish information defen positions",
+		"publiciz information mines", "publiciz information explosives", "publiciz information mine-field records", "publiciz information positioning units",
+		"publiciz information forces", "publiciz information armament", "publiciz information equipment", "publiciz information location", "publiciz information front line", "publiciz information defen works", "publiciz information defen positions",
+		"socialize information mines", "socialize information explosives", "socialize information mine-field records", "socialize information positioning units",
+		"socialize information forces", "socialize information armament", "socialize information equipment", "socialize information location", "socialize information front line", "socialize information defen works", 
+		"socialize information defen positions";
+	skos:prefLabel "Information Exchange" .
+
+# 10.4 Peacekeeping force
+<http://wallscope.co.uk/resource/peacetech/concept/peacekeeping_force> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation> ;
+	skos:hiddenLabel 
+		"peacekeeping force",
+		"un",
+		"united nations peacekeeping",
+		"international polic",
+		"international force";
+	skos:prefLabel "Peacekeeping force" .
+
+# 10.5 Ceasefire exceptions
+<http://wallscope.co.uk/resource/peacetech/concept/ceasefire_exceptions> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation> ;
+	skos:hiddenLabel 
+		"ceasefire exceptions",
+		"prisoners ordinary crimes",
+		"ordinary prisoners",
+		"crimes",
+		"storage indirect fire weapons",
+		"security forces continuing to hold weapons",
+		"police forces continuing to hold weapons",
+		"national army continuing to hold weapons",
+		"civilian police performing normal police duties",
+		"exception of those indicated below";
+	skos:prefLabel "Ceasefire exceptions" .
+
+# 10.6 Law
+<http://wallscope.co.uk/resource/peacetech/concept/law> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/implementation> ;
+	skos:hiddenLabel 
+		"law",
+		"international humanitarian law",
+		"international human rights law",
+		"human rights",
+		"red cross",
+		"red crescent",
+		"geneva conventions",
+		"protocol II",
+		"1949",
+		"optional oprotocol to the convention",
+		"emergency law",
+		"legislation";
+	skos:prefLabel "Law" .
+
+# 11 Reference to Political Process
+<http://wallscope.co.uk/resource/peacetech/concept/reference_to_political_process> a skos:Concept ;
+	skos:prefLabel "Reference to Political Process" .
+
+# 11.1 Reference to other ceasefire agreements
+<http://wallscope.co.uk/resource/peacetech/concept/reference_to_other_ceasefires> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/reference_to_political_process> ;
+	skos:hiddenLabel "other ceasefire" ;
+	skos:prefLabel "Reference to other ceasefire agreements" .
+
+# 11.2 Political Commitments
+<http://wallscope.co.uk/resource/peacetech/concept/political_commitments> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/reference_to_political_process> ;
+	skos:hiddenLabel 
+		"political commitments",
+		"political framework",
+		"principles",
+		"agenda",
+		"values",
+		"agreement";
+	skos:prefLabel "Political Commitments" .
+
+# 11.3 Commitment to negotiations
+<http://wallscope.co.uk/resource/peacetech/concept/commitment_to_negotiations> a skos:Concept ;
+	skos:broader <http://wallscope.co.uk/resource/peacetech/concept/reference_to_political_process> ;
+	skos:hiddenLabel 
+		"commitment to negotiations",
+		"negotiations",
+		"political dialogue",
+		"talks",
+		"peace process",
+		"transition agreement",
+		"framework negotiations",
+		"framework agreement",
+		"further agreements";
+	skos:prefLabel "Commitment to negotiations" .
+
