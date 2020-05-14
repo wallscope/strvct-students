@@ -57,7 +57,8 @@ Returns all entities from the triplestore as JSON Objects in an array.
 ```javascript
 { params: {
         ext: string
-      }}
+      }
+}
 ```
 Where ext is a file extension, either `ttl`, `rdf` or `n3`.
 ### Response Shape
