@@ -1,11 +1,12 @@
 
-# STRVCT backend
+# STRVCT API Readme
+
 The STRVCT Backend API is written in Kotlin. It serves as the bridge between the front-end (written in Vue.js with TypeScript/PUG/SCSS) and the triplestore (Blazegraph) which stores the generated vocabulary. 
-AppRoute.kt contains all available endpoints, explained below.
+All available endpoints are explained below.
 
 In [/vocabularies](vocabularies/), there are three vocabularies, all of varying sizes, labeled as small, medium and large.
 
-The API is available at: 
+The API is available at: link TBA
 
 # Endpoints
 
