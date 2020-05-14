@@ -145,5 +145,4 @@ Endpoint to change the schema:keywords property of an entity. In this case, the 
 
 The backend ingests the given RDF file, clears the store and then uploads the file's RDF to it.
 
-## POST /change
 
