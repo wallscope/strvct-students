@@ -1,11 +1,12 @@
 
-# STRVCT backend
+# STRVCT API Readme
+
 The STRVCT Backend API is written in Kotlin. It serves as the bridge between the front-end (written in Vue.js with TypeScript/PUG/SCSS) and the triplestore (Blazegraph) which stores the generated vocabulary. 
-AppRoute.kt contains all available endpoints, explained below.
+All available endpoints are explained below.
 
-In /vocabularies, there are three vocabularies, all of varying sizes, labeled as small, medium and large.
+In [/vocabularies](vocabularies/), there are three vocabularies, all of varying sizes, labeled as small, medium and large.
 
-The API is available at: 
+The API is available at: link TBA
 
 # Endpoints
 
@@ -57,7 +58,8 @@ Returns all entities from the triplestore as JSON Objects in an array.
 ```javascript
 { params: {
         ext: string
-      }}
+      }
+}
 ```
 Where ext is a file extension, either `ttl`, `rdf` or `n3`.
 ### Response Shape
@@ -144,5 +146,4 @@ Endpoint to change the schema:keywords property of an entity. In this case, the 
 
 The backend ingests the given RDF file, clears the store and then uploads the file's RDF to it.
 
-## POST /change
 
