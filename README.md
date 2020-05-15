@@ -96,6 +96,25 @@ Where ext is a file extension, either `ttl`, `rdf` or `n3`.
 ### Response Shape
 The response from the API is a `text/plain;charset=utf-8` content type, in the form of an RDF file, the easiest to read is a .ttl file. See here: https://www.w3.org/TR/turtle/
 
+### Response Example
+Here's a typical `.ttl` file example
+```
+@base <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<#green-goblin>
+    rel:enemyOf <#spiderman> ;
+    a foaf:Person ;    # in the context of the Marvel universe
+    foaf:name "Green Goblin" .
+
+<#spiderman>
+    rel:enemyOf <#green-goblin> ;
+    a foaf:Person ;
+    foaf:name "Spiderman", "Человек-паук"@ru .
+```
 
 ## POST /addentity
 
