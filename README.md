@@ -11,7 +11,7 @@ The API is available at: link TBA
 
 # Vocabulary 
 
-The vocabularies are all RDF vocabularies in SKOS notation. To read more, check out either [the official spec](https://www.w3.org/TR/swbp-skos-core-spec/) or [some of our blog posts](https://medium.com/wallscope) for more insight. 
+The vocabularies are all RDF vocabularies in SKOS notation. To read more, check out either [the official spec](https://www.w3.org/TR/swbp-skos-core-spec/) or [some of our blog posts](https://medium.com/wallscope) for more insight. [This one] is particularly useful to help introduce you to Linked Data & RDF, written by our very own [@afduarte](https://github.com/afduarte)
 
 There are many serialisations of RDF, the most human readable and the format that you are provided is `.ttl (Turtle)`. The examples in this section write out concepts in `.ttl` format. 
 
