@@ -8,6 +8,36 @@ In [/vocabularies](vocabularies/), there are three vocabularies, all of varying 
 
 The API is available at: link TBA
 
+
+# Vocabulary 
+
+The vocabularies are all RDF vocabularies in SKOS notation. To read more, check out either [the official spec](https://www.w3.org/TR/swbp-skos-core-spec/) or [some of our blog posts](https://medium.com/wallscope) for more insight. 
+
+There are many serialisations of RDF, the most human readable and the format that you are provided is `.ttl (Turtle)`. The examples in this section write out concepts in `.ttl` format. 
+
+In short, STRVCT will generate a vocabulary where each concept (think individual) will have a set amount of properties: a name, some note, some keywords, and a "parent" concept. One concept can have one & only one parent, but many children. 
+
+Here's the general shape of a concept in a vocabulary: 
+
+```
+<conceptURI> a skos:Concept ;
+schema:keywords "comma, separated, keywords" ;
+skos:prefLabel "concept name" ;
+skos:note "some note about the concept" ;
+skos:broader <anotherConceptUri> .
+```
+
+It's easier to think of a vocabulary as a tree-like hierarchy. Here's the general shape a vocabulary takes:
+
+```
+a
+	b (child of a)
+		c (child of b)
+d
+	f (child of d)
+e
+```
+
 # Endpoints
 
 ## GET /getentities
