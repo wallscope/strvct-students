@@ -26,6 +26,7 @@ skos:prefLabel "concept name" ;
 skos:note "some note about the concept" ;
 skos:broader <anotherConceptUri> .
 ```
+A concept is not limited in how many properties it can have (some in the examples provided have others such as skos:hiddenLabel). These are allowed. A concept can also have as few properties as it wants, provided it has a [URI](https://www.w3.org/wiki/URI) and a [name](https://www.w3.org/2012/09/odrl/semantic/draft/doco/skos_prefLabel.html).
 
 It's easier to think of a vocabulary as a tree-like hierarchy. Here's the general shape a vocabulary takes:
 
