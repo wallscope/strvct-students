@@ -6,7 +6,7 @@ All available endpoints are explained below.
 
 In [/vocabularies](vocabularies/), there are three vocabularies, all of varying sizes, labeled as small, medium and large.
 
-The API is available at: link TBA
+The API is available at: http://dev.verinote.net:4000/
 
 
 # Vocabulary 
@@ -41,7 +41,7 @@ e
 
 # Endpoints
 
-## GET /getentities
+## GET /app/getentities
 Returns all entities from the triplestore as JSON Objects in an array. 
 
 ### Response Shape
@@ -83,7 +83,7 @@ Returns all entities from the triplestore as JSON Objects in an array.
 ```
 
 
-## GET /getvocabularyfile
+## GET /app/getvocabularyfile
 
 ### Request shape:
 ```javascript
@@ -115,7 +115,7 @@ Here's a typical `.ttl` file example
     foaf:name "Spiderman", "Человек-паук"@ru .
 ```
 
-## POST /addentity
+## POST /app/addentity
 
 ### Request shape: 
 JSON Object with the following: 
@@ -131,11 +131,11 @@ JSON Object with the following:
 
 The `?` denotes that the fields are optional. Note that the URI for the entitiy is generated in the backend using a random UUIDV4. If any optional fields are present, they're added to the concept, otherwise ignored.
 
-## POST /clearstore
+## POST /app/clearstore
 
 Posting to this endpoint simply clears out the triple store.
 
-## POST /deleteentity
+## POST /app/deleteentity
 
 ### Request shape:
 JSON Object with the following: 
@@ -145,7 +145,7 @@ JSON Object with the following:
 
 Deletes an entity from the triple store with the URI provided. 
 
-## POST /changedesc
+## POST /app/changedesc
 
 ### Request shape:
 JSON Object with the following: 
@@ -159,7 +159,7 @@ JSON Object with the following:
 Endpoint to change the skos:note property of an entity. In this case, the uri and note are required as strings. The API then finds the entity by URI and updates the note property.
 
 
-##POST /changename
+## POST /app/changename
 
 ### Request shape: 
 JSON Object with the following:
@@ -172,7 +172,7 @@ JSON Object with the following:
 Endpoint to change the skos:prefLabel (name) property of an entity. In this case, the uri and name are required as strings. The API then finds the entity by URI and updates the name property.
 
 
-## POST /changekeywords
+## POST /app/changekeywords
 
 ### Request shape:
 JSON Object with the following: 
@@ -186,7 +186,7 @@ JSON Object with the following:
 Endpoint to change the schema:keywords property of an entity. In this case, the uri and keywords are required as strings. According to the documentation, the schema:keywords property should be a string, with each keyword separated by a comma. For example `{uri: "someURI", keywords: "key1, key2, key3"}`. 
 
 
-## POST /uploadvocabulary
+## POST /app/uploadvocabulary
 ### Request shape:
 ```javascript
 { headers: { "Content-Type": "multipart/form-data" } }
