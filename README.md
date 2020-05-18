@@ -41,6 +41,11 @@ e
 
 # Endpoints
 
+## /app/
+Returns "HELLO WORLD!"
+
+Used to test that the endpoint is actually up and running 🤡
+
 ## GET /app/getentities
 Returns all entities from the triplestore as JSON Objects in an array. 
 
