@@ -6,7 +6,6 @@
 #******************************************************************************
 # Top-level words are defined as Concepts
 # with everything below being a concept, which can have further "child" concepts
-# POSSIBLE TAGS:  LOCATION ORGANIZATION DATE MONEY PERSON PERCENT TIME
 #******************************************************************************
 
 # 1. Ceasefire Timeline
